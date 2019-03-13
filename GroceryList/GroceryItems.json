@@ -1,0 +1,546 @@
+[
+    {
+        "item" : "banana",
+        "section" : "produce"
+    },
+    {
+        "item" : "orange",
+        "section" : "produce"
+    },
+    {
+        "item" : "spinach",
+        "section" : "produce"
+    },
+    {
+        "item" : "kale",
+        "section" : "produce"
+    },
+    {
+        "item" : "onion",
+        "section" : "produce"
+    },
+    {
+        "item" : "lemon",
+        "section" : "produce"
+    },
+    {
+        "item" : "onion",
+        "section" : "produce"
+    },
+    {
+        "item" : "broccoli",
+        "section" : "produce"
+    },
+    {
+        "item" : "tomato",
+        "section" : "produce"
+    },
+    {
+        "item" : "apple",
+        "section" : "produce"
+    },
+    {
+        "item" : "strawberry",
+        "section" : "produce"
+    },
+    {
+        "item" : "blueberry",
+        "section" : "produce"
+    },
+    {
+        "item" : "blackberry",
+        "section" : "produce"
+    },
+    {
+        "item" : "raspberry",
+        "section" : "produce"
+    },
+    {
+        "item" : "baked potato",
+        "section" : "produce"
+    },
+    {
+        "item" : "sweet potato",
+        "section" : "produce"
+    },
+    {
+        "item" : "green grape",
+        "section" : "produce"
+    },
+    {
+        "item" : "red grape",
+        "section" : "produce"
+    },
+    {
+        "item" : "green pepper",
+        "section" : "produce"
+    },
+    {
+        "item" : "red pepper",
+        "section" : "produce"
+    },
+    {
+        "item" : "orange pepper",
+        "section" : "produce"
+    },
+    {
+        "item" : "yellow pepper",
+        "section" : "produce"
+    },
+    {
+        "item" : "carrot",
+        "section" : "produce"
+    },
+    {
+        "item" : "mushroom",
+        "section" : "produce"
+    },
+    {
+        "item" : "garlic",
+        "section" : "produce"
+    },
+    {
+        "item" : "asparagus",
+        "section" : "produce"
+    },
+    {
+        "item" : "cauliflower",
+        "section" : "produce"
+    },
+    {
+        "item" : "cauliflower rice",
+        "section" : "produce"
+    },
+    {
+        "item" : "celery",
+        "section" : "produce"
+    },
+    {
+        "item" : "corn",
+        "section" : "produce"
+    },
+    {
+        "item" : "cucumber",
+        "section" : "produce"
+    },
+    {
+        "item" : "lettuce",
+        "section" : "produce"
+    },
+    {
+        "item" : "acorn squash",
+        "section" : "produce"
+    },
+    {
+        "item" : "zucchini",
+        "section" : "produce"
+    },
+    {
+        "item" : "summer squash",
+        "section" : "produce"
+    },
+    {
+        "item" : "avocado",
+        "section" : "produce"
+    },
+    {
+        "item" : "grape fruit",
+        "section" : "produce"
+    },
+    {
+        "item" : "kiwi",
+        "section" : "produce"
+    },
+    {
+        "item" : "lime",
+        "section" : "produce"
+    },
+    {
+        "item" : "watermelor",
+        "section" : "produce"
+    },
+    {
+        "item" : "peach",
+        "section" : "produce"
+    },
+    {
+        "item" : "pear",
+        "section" : "produce"
+    },
+    {
+        "item" : "plum",
+        "section" : "produce"
+    },
+    {
+        "item" : "bagel",
+        "section" : "bakery"
+    },
+    {
+        "item" : "chip dip",
+        "section" : "dairy"
+    },
+    {
+        "item" : "english muffin",
+        "section" : "bakery"
+    },
+    {
+        "item" : "egg",
+        "section" : "dairy"
+    },
+    {
+        "item" : "apple juice",
+        "section" : "drinks"
+    },
+    {
+        "item" : "cranberry juice",
+        "section" : "drinks"
+    },
+    {
+        "item" : "orange juice",
+        "section" : "drinks"
+    },
+    {
+        "item" : "tofu",
+        "section" : "dairy"
+    },
+    {
+        "item" : "tortilla",
+        "section" : "bakery"
+    },
+    {
+        "item" : "burrito",
+        "section" : "frozen"
+    },
+    {
+        "item" : "fish stick",
+        "section" : "frozen"
+    },
+    {
+        "item" : "ice cream",
+        "section" : "frozen"
+    },
+    {
+        "item" : "pizza",
+        "section" : "frozen"
+    },
+    {
+        "item" : "popsicle",
+        "section" : "frozen"
+    },
+    {
+        "item" : "fries",
+        "section" : "frozen"
+    },
+    {
+        "item" : "tater tot",
+        "section" : "frozen"
+    },
+    {
+        "item" : "peas",
+        "section" : "frozen"
+    },
+    {
+        "item" : "green bean",
+        "section" : "frozen"
+    },
+    {
+        "item" : "bbq",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "gravy",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "honey",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "hot sauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "ketchup",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "mustard",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "mayonnaise",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "tomato sauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "pasta sauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "relish",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "ranch",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "salsa",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "soy sauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "syrup",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "worcestershire sauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "coffee",
+        "section" : "drinks"
+    },
+    {
+        "item" : "lucky charms",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "mac and cheese",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "pancake mix",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "dry pasta",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "peanut butter",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "pickle",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "rice",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "applesauce",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "baked bean",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "black bean",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "red bean",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "tuna",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "chicken noodle soup",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "diced tomato",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "salt",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "pepper",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "butter",
+        "section" : "dairy"
+    },
+    {
+        "item" : "margarine",
+        "section" : "dairy"
+    },
+    {
+        "item" : "cottage cheese",
+        "section" : "dairy"
+    },
+    {
+        "item" : "cream cheese",
+        "section" : "dairy"
+    },
+    {
+        "item" : "half and half",
+        "section" : "dairy"
+    },
+    {
+        "item" : "skim milk",
+        "section" : "dairy"
+    },
+    {
+        "item" : "almond milk",
+        "section" : "dairy"
+    },
+    {
+        "item" : "coconut milk",
+        "section" : "dairy"
+    },
+    {
+        "item" : "coconut milk",
+        "section" : "cans/jars"
+    },
+    {
+        "item" : "cheddar cheese",
+        "section" : "dairy"
+    },
+    {
+        "item" : "feta",
+        "section" : "dairy"
+    },
+    {
+        "item" : "mozzarella",
+        "section" : "dairy"
+    },
+    {
+        "item" : "provolone",
+        "section" : "dairy"
+    },
+    {
+        "item" : "parmesan",
+        "section" : "dairy"
+    },
+    {
+        "item" : "swiss",
+        "section" : "dairy"
+    },
+    {
+        "item" : "pepper jack",
+        "section" : "dairy"
+    },
+    {
+        "item" : "catfish",
+        "section" : "deli/meats"
+    },
+    {
+        "item" : "salmon",
+        "section" : "deli/meats"
+    },
+    {
+        "item" : "shrimp",
+        "section" : "deli/meats"
+    },
+    {
+        "item" : "tilapia",
+        "section" : "deli/meats"
+    },
+    {
+        "item" : "club soda",
+        "section" : "drinks"
+    },
+    {
+        "item" : "la croix",
+        "section" : "drinks"
+    },
+    {
+        "item" : "tonic",
+        "section" : "drinks"
+    },
+    {
+        "item" : "dr. pepper",
+        "section" : "drinks"
+    },
+    {
+        "item" : "sprite",
+        "section" : "drinks"
+    },
+    {
+        "item" : "wheat bread",
+        "section" : "bakery"
+    },
+    {
+        "item" : "white bread",
+        "section" : "bakery"
+    },
+    {
+        "item" : "baking power",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "baking soda",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "flour",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "sugar",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "brown sugar",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "cake mix",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "brownie mix",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "frosting",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "red hots",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "red vines",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "cherry ball",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "gummy worm",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "cheese it",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "pringle",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "lara bar",
+        "section" : "boxes/bags"
+    },
+    {
+        "item" : "popcorn",
+        "section" : "boxes/bags"
+    }
+]
