@@ -27,7 +27,7 @@ namespace GroceryList
             fileName = Path.Combine(directory.FullName, "GroceryItems.json");
             groceryItems = DeserializeGroceryItems(fileName);
 
-            //application main menu
+//application main menu
             CommandLine.DisplayWelcome();
 
             int option = 0;
