@@ -23,8 +23,6 @@ namespace GroceryList
             string currentDirectory = Directory.GetCurrentDirectory();
             DirectoryInfo directory = new DirectoryInfo(currentDirectory);
             var fileName = Path.Combine(directory.FullName, "GroceryItems.json");
-            var fileContents = ReadFile(fileName);
-            fileName = Path.Combine(directory.FullName, "GroceryItems.json");
             groceryItems = DeserializeGroceryItems(fileName);
 
 //application main menu
@@ -56,13 +54,13 @@ namespace GroceryList
         }
 
 //reads json file
-        public static string ReadFile(string fileName)
-        {
-            using (var reader = new StreamReader(fileName))
-            {
-                return reader.ReadToEnd();
-            }
-        }
+  //      public static string ReadFile(string fileName)
+  //      {
+  //          using (var reader = new StreamReader(fileName))
+  //          {
+  //              return reader.ReadToEnd();
+  //          }
+  //      }
 
 //deserialzing json data
         public static List<GroceryItem> DeserializeGroceryItems(string fileName)
@@ -84,7 +82,7 @@ namespace GroceryList
             Console.WriteLine("-----------------------");
             foreach (var groceryItem in groceryItems)
             {
-                Console.WriteLine(groceryItem.Item);
+                Console.WriteLine(groceryItem.Item + "       " + groceryItem.Section);
             }
         }
 
@@ -103,7 +101,7 @@ namespace GroceryList
                 }
                 else
                 {
-                    string section = CommandLine.Prompt("What section is it in? ");
+                    string section = CommandLine.Prompt("What section is it in? (produce, bakery, deli, cans/jars, boxes/bags, drinks, frozen, or dairy) ");
                     if (section == "produce" || section == "bakery" || section == "deli" || section == "cans/jars" || section == "boxes/bags" || section == "drinks" || section == "frozen" || section == "dairy")
                     {
                         groceryItems.Add(new GroceryItem { Item = item, Section = section });
@@ -111,7 +109,7 @@ namespace GroceryList
                     }
                     else
                     {
-                        Console.WriteLine("Available sections are produce, baker, deli, cans/jars, boxes/bags, drinks, frozen, and dairy.");
+                        Console.WriteLine("Available sections are produce, bakery, deli, cans/jars, boxes/bags, drinks, frozen, and dairy.");
                         done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
                     }
                 }
