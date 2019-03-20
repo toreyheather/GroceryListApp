@@ -12,6 +12,7 @@ namespace GroceryList
     {
         static List<GroceryItem> groceryItems = new List<GroceryItem>();
         static List<GroceryItem> neededItems = new List<GroceryItem>();
+        static List<GroceryItem> organizedNeededItems = new List<GroceryItem>();
 
         public static void Main(string[] args)
         {
@@ -47,12 +48,14 @@ namespace GroceryList
                         break;
                     case 4:
                         CreateShoppingList();
-                        SerializeNeededItemsToFile(neededItems, "ShoppingList.json");
+                        SectionSorter();
+                        SerializeNeededItemsToFile(organizedNeededItems, "ShoppingList.txt");
                         break;
                 }
             }
         }
 
+//reads json file
         public static string ReadFile(string fileName)
         {
             using (var reader = new StreamReader(fileName))
@@ -94,16 +97,23 @@ namespace GroceryList
             do
             {
                 string item = CommandLine.Prompt("What item do you want to add? ");
-                string section = CommandLine.Prompt("What section is it in? ");
-                if(section == "produce" || section == "bakery" || section == "deli" || section == "cans/jars" || section == "boxes/bags" || section == "drinks" || section == "frozen" || section == "dairy")
+                if (item == "")
                 {
-                    groceryItems.Add(new GroceryItem { Item = item, Section = section });
-                    done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
+                    Console.WriteLine("Please enter an item");
                 }
                 else
                 {
-                    Console.WriteLine("Available sections are produce, baker, deli, cans/jars, boxes/bags, drinks, frozen, and dairy.");
-                    done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
+                    string section = CommandLine.Prompt("What section is it in? ");
+                    if (section == "produce" || section == "bakery" || section == "deli" || section == "cans/jars" || section == "boxes/bags" || section == "drinks" || section == "frozen" || section == "dairy")
+                    {
+                        groceryItems.Add(new GroceryItem { Item = item, Section = section });
+                        done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
+                    }
+                    else
+                    {
+                        Console.WriteLine("Available sections are produce, baker, deli, cans/jars, boxes/bags, drinks, frozen, and dairy.");
+                        done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
+                    }
                 }
             }
             while (!done);
@@ -118,9 +128,17 @@ namespace GroceryList
             do
             { 
                 string item = CommandLine.Prompt("What item do you want to remove? ");
-                var removedItem = groceryItems.Find(i => i.Item == item); 
-                groceryItems.Remove(removedItem);
-                done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
+                var removedItem = groceryItems.Find(i => i.Item == item);
+                if (removedItem == null)
+                {
+                    Console.WriteLine("That is not an available item.");
+                    done = CommandLine.Prompt("Do you want to try to remove another item? (y/n) ").ToLower() != "y";
+                }
+                else
+                {
+                    groceryItems.Remove(removedItem);
+                    done = CommandLine.Prompt("Remove another item? (y/n) ").ToLower() != "y";
+                }
             }
             while (!done);
         }
@@ -147,12 +165,10 @@ namespace GroceryList
             {
                 string itemNeeded = CommandLine.Prompt("What item do you need to get? ");
                 var itemToAdd = groceryItems.Find(i => i.Item == itemNeeded);
-                
-                done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
                 if(itemToAdd == null)
                 {
                     Console.WriteLine("That item is not available.");
-                   
+                    done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
                 }
                 else
                 {
@@ -161,20 +177,47 @@ namespace GroceryList
                     {
                         Console.WriteLine(groceryItem.Item);
                     }
-
+                    done = CommandLine.Prompt("Add another item? (y/n) ").ToLower() != "y";
                 };
             }
             while (!done);
         }
 
+//sorts needed items by grocery store sections
+//produce = 1
+//bakery = 2
+//deli = 3
+//cans/jars = 4
+//boxes/bags = 5
+//drinks = 6
+//frozen = 7
+//dairy = 8
+        public static void SectionSorter()
+        {
+            organizedNeededItems = neededItems.OrderBy(n => n.Section == "dairy")
+                                                  .ThenBy(neededItems => neededItems.Section == "frozen")
+                                                  .ThenBy(neededItems => neededItems.Section == "drinks")
+                                                  .ThenBy(neededItems => neededItems.Section == "boxes/bags")
+                                                  .ThenBy(neededItems => neededItems.Section == "cans/jars")
+                                                  .ThenBy(neededItems => neededItems.Section == "deli")
+                                                  .ThenBy(neededItems => neededItems.Section == "bakery")
+                                                  .ThenBy(neededItems => neededItems.Section == "produce")
+                                                  .ToList();
+
+            foreach (var neededItems in organizedNeededItems)
+            {
+                Console.WriteLine(neededItems.Item);
+            }
+        }
+
 //serialize needed grocery items list
-        public static void SerializeNeededItemsToFile(List<GroceryItem> neededItems, string fileName)
+        public static void SerializeNeededItemsToFile(List<GroceryItem> organizedNeededItems, string fileName)
         {
             var serializer = new JsonSerializer();
             using (var writer = new StreamWriter(fileName))
             using (var jsonWriter = new JsonTextWriter(writer))
             {
-                serializer.Serialize(jsonWriter, neededItems);
+                serializer.Serialize(jsonWriter, organizedNeededItems);
             }
         }
     }
